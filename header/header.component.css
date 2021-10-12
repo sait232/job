@@ -1,0 +1,13 @@
+.colorpicker{
+    background-color: #262673;
+}
+.colorpicker1{
+    color: white;
+}
+.colorpicker1:hover{
+    color: red;
+}
+.fonts{
+   font-family:  "Lucida Console", "Courier New", monospace;
+   font-size: 30px;
+}
