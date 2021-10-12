@@ -1,0 +1,66 @@
+<p>products works!</p>
+<div class="container">
+<div class="d-flex align-items-start" >
+  <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">ID</button>
+    <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">NAME</button>
+    <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">ALL</button>
+    <button class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">MIN MAX</button>
+  </div>
+  <div class="tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">getid
+      <!-- get by id --> 
+     <div class="container" >
+      <input type="number" [(ngModel)]="id" >
+      <button type="submit" (click)="getid()" class="btn btn-primary">GET</button>
+     <p>{{get | json}}</p> 
+    </div>  
+    </div>
+     <!-- /// -->
+      <!-- name -->
+    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">name
+      <div class="container">
+        <input type="string" [(ngModel)]="id1">
+        <button class="btn btn-primary" (click)="getname()">SUBMIT</button>
+        <p>{{get1 | json}}</p>
+      </div>  
+    </div>
+     <!-- // -->
+     <!-- getall -->
+    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">getAll
+    <div class="table table-bordered">
+      <tr>
+        <th>PRODUCT_ID</th>
+        <th>NAME</th>
+        <th>DESCRIPTION</th>
+        <th>PRICE</th>
+      </tr>
+      <tr *ngFor="let x of get2">
+        <td>{{x.PRODUCT_ID}}</td>
+        <td>{{x.NAME}}</td>
+        <td>{{x.DESCRIPTION}}</td>
+        <td>{{x.PRICE}}</td>
+      </tr>
+
+    </div>
+    </div>
+    <!-- // -->
+    <!-- range -->
+    <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">
+      <div>
+        <input type="number" [(ngModel)]="min">
+        <input type="number" [(ngModel)]="max">
+        <button type="submit" class="btn btn-primary" (click)="getRange()">range</button>
+      <p>{{minmaxarray | json}}</p>
+        <!-- <div *ngFor="let x of minmaxarray">
+
+          <p>{{x.PRODUCT_ID}}</p>
+          <p>{{x.NAME}}</p>
+          <p>{{x.DESCRIPTION}}</p>
+          <p>{{x.PRICE}}</p>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+</div>

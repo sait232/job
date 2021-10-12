@@ -1,0 +1,70 @@
+<p>sign-in works!</p>
+<div class="container">
+    <div class="move">
+<form  [formGroup]="loginForm ">
+   
+   <div class=" login">
+    <h1 class="bg-success">LOGIN</h1>
+   </div>
+    <div class="form-group">
+        
+         <div>
+        <label for="Email"><i class="fas fa-envelope-square mr-2"></i>Email</label>
+    </div>  
+        <input type="text" id="Email" name="Email" class="form-Control" formControlName="Email" class="input">
+    
+    <div *ngIf="getEmail().touched && getEmail().invalid">
+
+        <div *ngIf="getEmail().errors.required">
+            <p>Email is required</p>
+        </div>
+        <div *ngIf="getEmail().errors.pattern">
+           <p>must be @ specail character . requird</p>
+       </div>
+       </div>
+    </div>
+    <div class="form-group">
+        <div>
+        <label for="Password"><i class="fas fa-unlock-alt"></i>Password</label>
+        </div>
+        <input type="text" id="Password" name="Password" class="form-Control" formControlName="Password" class="input">
+        <div *ngIf="getPassword().touched && getPassword().invalid">
+
+            <div *ngIf="getPassword().errors.required">
+                <p>password is required</p>
+            </div>
+            <div *ngIf="getPassword().errors.pattern">
+               <p>must be 1 lower 1 upper 1 special 1 number</p>
+           </div>
+          
+    </div>
+</div>
+<div>
+    <button type="button" class="btn btn-success mt-2">Submit</button>
+</div>
+<div class="login">
+    <p class="bg-success mt-3 ">&copy; rights 2021</p>
+</div>
+
+</form>
+</div>
+</div>
+<!-- toggle -->
+
+  
+
+   
+  
+      
+      
+    <div>
+        <div *ngIf="isActive">
+            <h1>hi</h1>
+        </div>
+    <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round" type="checkbox" (click)="toggle1()">
+    <label for="cmn-toggle-1"></label>
+</div>
+ 
+<!-- button -->
+
+
