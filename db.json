@@ -1,0 +1,32 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "json-server",
+      "author": "typicode",
+      "price":1000
+    },
+    {
+      "id": 2,
+      "name": "sai",
+      "author": "teja",
+      "price":500
+    },
+    {
+      "id": 3,
+      "name": "sujatha",
+      "author": "m",
+      "price":100
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
